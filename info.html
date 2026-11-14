@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation - Pete & Moo | ពិសិដ្ឋ & សូផាមរកត</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Khmer & English Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Battambang:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Kantumruy+Pro:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&family=Moul&family=Moulpali&family=Noto+Serif+Khmer:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        velvet: {
+                            950: '#120205',
+                            900: '#23050C',
+                            800: '#3D0A14',
+                            700: '#5C101E',
+                            600: '#7A1828',
+                        },
+                        ivory: {
+                            50: '#FCFAF7',
+                            100: '#F7F3EC',
+                            200: '#EFE6D8',
+                            300: '#E1D3BF',
+                        },
+                        gold: {
+                            300: '#F3E5AB',
+                            400: '#E2C275',
+                            500: '#C5A059',
+                            600: '#A37E36',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        script: ['"Alex Brush"', 'cursive'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        moul: ['"Moul"', 'serif'],
+                        moulpali: ['"Moulpali"', 'serif'],
+                        kantumruy: ['"Kantumruy Pro"', 'sans-serif'],
+                        battambang: ['"Battambang"', 'sans-serif'],
+                        notokhmer: ['"Noto Serif Khmer"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #120205;
+            color: #F7F3EC;
+            overflow-x: hidden;
+            font-family: 'Montserrat', 'Kantumruy Pro', sans-serif;
+            line-height: 1.8;
+            background-image: url(img/2J3A0241.JPG);
+        }
+
+        /* Dedicated Khmer Font Family Utility Classes */
+        .font-moul { font-family: 'Moul', serif !important; line-height: 2.1 !important; }
+        .font-moulpali { font-family: 'Moulpali', serif !important; line-height: 2.1 !important; }
+        .font-kantumruy { font-family: 'Kantumruy Pro', sans-serif !important; line-height: 1.8 !important; }
+        .font-battambang { font-family: 'Battambang', sans-serif !important; line-height: 1.85 !important; }
+        .font-noto-khmer { font-family: 'Noto Serif Khmer', serif !important; line-height: 1.9 !important; }
+
+        /* Strict Global Rules for Khmer Text to prevent broken system glyphs & diacritic cropping */
+        :lang(km), [lang="km"], .font-khmer {
+            font-family: 'Kantumruy Pro', 'Battambang', 'Noto Serif Khmer', sans-serif !important;
+            line-height: 1.85 !important;
+            padding-top: 0.1em;
+            padding-bottom: 0.1em;
+        }
+
+        :lang(km) h1, :lang(km) h2, :lang(km) h3,
+        [lang="km"] h1, [lang="km"] h2, [lang="km"] h3 {
+            line-height: 2.0 !important;
+        }
+
+        /* Velvet & Silk Gradient Overlays */
+        .burgundy-silk {
+            background: linear-gradient(180deg, #120205 0%, #23050C 40%, #3D0A14 70%, #120205 100%);
+        }
+
+        .ivory-card {
+            background-color: #F7F3EC;
+            color: #23050C;
+        }
+
+        /* Subtle hairline borders */
+        .hairline-border {
+            border-width: 0.5px;
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #120205;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5C101E;
+            border-radius: 3px;
+        }
+        
+
+        /* Soft Floating Pulse for Audio Toggle */
+        @keyframes floatPulse {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-3px) scale(1.03); }
+        }
+        .float-pulse {
+            animation: floatPulse 4s infinite ease-in-out;
+        }
+
+        /* Fixed background floral texture effect */
+        .bg-fixed-floral {
+            background-image: linear-gradient(to bottom, rgba(18, 2, 5, 0.88), rgba(35, 5, 12, 0.94)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Slider Animations */
+        .slide-fade {
+            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+        }
+    </style>
+</head>
+<body class="selection:bg-gold-500 selection:text-velvet-950 bg-fixed-floral min-h-screen" lang="en" id="appBody">
+
+    <!-- FLOATING CONTROLS: LANGUAGE & MUSIC -->
+    <div class="fixed top-5 right-5 z-50 flex items-center gap-3">
+        <!-- Ambient Music Synthesizer Toggle -->
+        <button id="musicBtn" onclick="toggleAudio()" class="float-pulse w-10 h-10 rounded-full bg-velvet-900/90 backdrop-blur-md border border-gold-500/40 text-gold-300 flex items-center justify-center shadow-2xl hover:text-white transition-all cursor-pointer">
+            <i id="musicIcon" class="fa-solid fa-music text-xs"></i>
+        </button>
+    </div>
+
+    <!-- MAIN CONTAINER (Desktop-optimized wide responsive layout) -->
+    <main class="max-w-5xl mx-auto min-h-screen bg-velvet-950/95 relative shadow-2xl border-x border-gold-500/20 my-0 md:my-6 rounded-none md:rounded-lg overflow-hidden">
+
+        <!-- ================= 1. HERO SECTION ================= -->
+        <section class="relative pt-16 pb-20 px-6 text-center burgundy-silk flex flex-col items-center justify-between min-h-[90vh]">
+            
+            <div class="space-y-1">
+                <p class="text-[11px] md:text-xl uppercase tracking-[0.35em] text-gold-400 font-light">WEDDING INVITATION</p>
+                <p class="text-xs md:text-xl text-ivory-200/80 font-serif italic">Invitation to our celebration</p>
+            </div>
+
+            <div class="my-8">
+                <h1 class="font-serif text-5xl md:text-7xl tracking-widest text-ivory-50 font-light uppercase leading-tight">
+                    Pete <br class="md:hidden">
+                    <span class="font-script text-4xl md:text-6xl text-gold-400 lowercase font-normal my-2 inline-block md:mx-4">&amp;</span> 
+                    Moo
+                </h1>
+                <p class="font-serif text-base md:text-xl text-gold-300 mt-4 font-semibold tracking-wide leading-relaxed">
+                    Heng Piseth &amp; Kep Sophamorokort
+                </p>
+            </div>
+
+            <div class="max-w-md">
+                <p class="font-script text-2xl md:text-4xl text-gold-300/90 leading-relaxed">
+                    &ldquo;Two hearts, one story, forever ♡&rdquo;
+                </p>
+                <p class="text-[10px] md:text-xs tracking-[0.3em] uppercase text-ivory-200/60 mt-2">
+                    TOGETHER IN LOVE
+                </p>
+            </div>
+
+            <div class="my-8 relative w-72 md:w-80 p-6 monogram-tag text-velvet-950 rounded-xs mx-auto border border-gold-500/30 text-center shadow-2xl">
+                <div class="border border-velvet-900/20 p-4">
+                    <p class="font-serif text-3xl md:text-4xl tracking-[0.2em] font-light text-velvet-900" style="color: white;">P | M</p>
+                    <div class="w-10 h-px bg-gold-500/60 mx-auto my-2"></div>
+                    <p class="text-xs md:text-sm tracking-widest font-mono text-velvet-800" style="color: #F7F3EC;">11.12.2026</p>
+                </div>
+            </div>
+
+            <a href="#parents-section" class="text-gold-400/80 hover:text-gold-300 text-[10px] tracking-[0.25em] uppercase flex flex-col items-center gap-2 transition-all">
+                <span data-en="SCROLL DOWN" data-km="រមូរចុះក្រោម" data-km-class="font-kantumruy text-[11px]">SCROLL DOWN</span>
+                <i class="fa-solid fa-chevron-down text-xs animate-bounce"></i>
+            </a>
+        </section>
+
+        <!-- ================= 1.5 PARENTS' NAMES SECTION ================= -->
+        <section id="parents-section" class="py-16 px-6 md:px-12 bg-velvet-900/90 text-center border-t border-gold-500/20">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-400 font-light mb-1" data-en="HONORING PARENTS" data-km="សិរីមង្គលអាពាហ៍ពិពាហ៍" data-km-class="font-moul text-xs md:text-sm text-gold-300">HONORING PARENTS</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-ivory-50 uppercase tracking-wider mb-10" data-en="With Blessings of Parents" data-km="ដោយក្តីគោរពស្រឡាញ់យ៉ាងជ្រាលជ្រៅ" data-km-class="font-noto-khmer text-lg md:text-2xl text-ivory-100">With Blessings of Parents</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto text-center">
+                <div class="p-6 bg-velvet-950/80 border border-gold-500/30 rounded-xs shadow-xl">
+                    <span class="text-[11px] md:text-xs uppercase tracking-widest text-gold-400 block mb-2" data-en="Groom's Parents" data-km="មាតាបិតាខាងប្រុស" data-km-class="font-noto-khmer text-sm text-gold-300 font-semibold">Groom's Parents</span>
+                    <h4 class="font-noto-khmer text-sm md:text-base text-ivory-100 font-normal leading-relaxed">
+                        លោក សៀក ទៀងហេង <br>
+                        លោកស្រី ជា ណារី
+                    </h4>
+                </div>
+
+                <div class="p-6 bg-velvet-950/80 border border-gold-500/30 rounded-xs shadow-xl">
+                    <span class="text-[11px] md:text-xs uppercase tracking-widest text-gold-400 block mb-2" data-en="Bride's Parents" data-km="មាតាបិតាខាងស្រី" data-km-class="font-noto-khmer text-sm text-gold-300 font-semibold">Bride's Parents</span>
+                    <h4 class="font-noto-khmer text-sm md:text-base text-ivory-100 font-normal leading-relaxed">
+                        លោក កែប រតនា <br>
+                        លោកស្រី គឹម សុខខេង
+                    </h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 2. OUR STORY SECTION ================= -->
+        <section id="our-story" class="ivory-card py-20 px-8 text-center relative">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-600 font-medium mb-1" data-en="OUR STORY" data-km="រឿងរ៉ាវរបស់យើង" data-km-class="font-moul text-xs md:text-sm text-gold-600">OUR STORY</p>
+                <h2 class="font-serif text-3xl md:text-5xl text-velvet-900 uppercase tracking-wider mb-4" data-en="How It Started" data-km="ចំណងអាពាហ៍ពិពាហ៍" data-km-class="font-noto-khmer text-2xl md:text-3xl font-bold text-velvet-950">How It Started</h2>
+                
+                <div class="w-12 h-px bg-gold-500 mx-auto mb-8"></div>
+
+                <p class="text-xs md:text-base leading-relaxed text-velvet-900/80 font-light mb-8" data-en="It all started unexpectedly... One encounter, one conversation, and since then our days have become brighter. We laugh, dream, and build our future together. Now we want to share this special moment with you!" data-km="គ្រប់យ៉ាងបានចាប់ផ្តើមដោយមិនបានព្រាងទុក... ការជួបគ្នាមួយលើក កិច្ចសន្ទនាមួយ ហើយចាប់តាំងពីពេលនោះមក ពិភពលោករបស់យើងទាំងពីរក៏ពោរពេញដោយភាពភ្លឺស្វាង។ យើងសើច ស្រមៃ និងកសាងអនាគតជាមួយគ្នា ហើយពេលនេះយើងចង់ចែករំលែកខណៈពេលដ៏រំភើបនេះជាមួយអ្នក!" data-km-class="font-battambang text-xs md:text-sm text-velvet-900">
+                    It all started unexpectedly... One encounter, one conversation, and since then our days have become brighter. We laugh, dream, and build our future together.
+                </p>
+
+                <p class="font-script text-2xl md:text-4xl text-velvet-800 my-6" data-en="Love is our most beautiful adventure ♡" data-km="« សេចក្តីស្រឡាញ់គឺជាដំណើរផ្សងព្រេងដ៏ស្រស់ស្អាតបំផុតរបស់យើង ♡ »" data-km-class="font-battambang text-sm md:text-base text-velvet-900 font-semibold">
+                    Love is our most beautiful adventure ♡
+                </p>
+
+                <div class="relative mt-10 max-w-md mx-auto rounded-t-full overflow-hidden border-2 border-gold-500/40 shadow-2xl p-2 bg-white">
+                    <img src="img/2J3A9788.JPG" alt="Pete & Moo Portrait" class="w-full h-100 object-cover rounded-t-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 3. WHEN & WHERE SECTION ================= -->
+        <section class="bg-ivory-100 text-velvet-950 py-20 px-8 border-t border-gold-500/20 text-center">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-600 font-medium mb-1" data-en="DETAILS" data-km="ព័ត៌មានលម្អិត" data-km-class="font-moul text-xs md:text-sm text-gold-600">DETAILS</p>
+            <h2 class="font-serif text-3xl md:text-5xl uppercase tracking-wider text-velvet-900 mb-12" data-en="When & Where" data-km="ពេលវេលា & ទីតាំង" data-km-class="font-noto-khmer text-2xl md:text-3xl font-bold text-velvet-950">When &amp; Where</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-left">
+                <div class="flex items-start gap-4 p-4 bg-white/60 rounded-xs border border-gold-500/20 shadow-sm">
+                    <div class="w-12 h-12 rounded-full border border-gold-500/40 flex items-center justify-center text-gold-600 shrink-0 mt-1 bg-ivory-50">
+                        <i class="fa-regular fa-calendar text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg font-semibold text-velvet-900" data-en="Friday, 11th Dec 2026" data-km="ថ្ងៃសុក្រ ទី១១ ខែធ្នូ ឆ្នាំ២០២៦" data-km-class="font-noto-khmer text-sm font-bold text-velvet-950">Friday, 11th Dec 2026</h4>
+                        <p class="text-xs text-velvet-800/70 mt-1" data-en="Save the date in your calendar" data-km="ថ្ងៃសិរីមង្គលអាពាហ៍ពិពាហ៍" data-km-class="font-battambang text-xs">Save the date in your calendar</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white/60 rounded-xs border border-gold-500/20 shadow-sm">
+                    <div class="w-12 h-12 rounded-full border border-gold-500/40 flex items-center justify-center text-gold-600 shrink-0 mt-1 bg-ivory-50">
+                        <i class="fa-regular fa-clock text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg font-semibold text-velvet-900" data-en="06:00 AM & 05:00 PM" data-km="វេលាម៉ោង ០៦:០០ ព្រឹក & ០៥:០០ ល្ងាច" data-km-class="font-noto-khmer text-sm font-bold text-velvet-950">06:00 AM &amp; 05:00 PM</h4>
+                        <p class="text-xs text-velvet-800/70 mt-1" data-en="Morning Ceremony & Evening Gala" data-km="ពិធីតាមប្រពៃណីព្រឹក & ពិធីលៀងសាយភោជន៍ល្ងាច" data-km-class="font-battambang text-xs">Morning Ceremony &amp; Evening Gala</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white/60 rounded-xs border border-gold-500/20 shadow-sm">
+                    <div class="w-12 h-12 rounded-full border border-gold-500/40 flex items-center justify-center text-gold-600 shrink-0 mt-1 bg-ivory-50">
+                        <i class="fa-solid fa-location-dot text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-lg font-semibold text-velvet-900" data-en="The Grand Terrace" data-km="មជ្ឈមណ្ឌល ឌឹ ហ្គ្រេន ថេរ៉ាស" data-km-class="font-noto-khmer text-sm font-bold text-velvet-950">The Grand Terrace</h4>
+                        <p class="text-xs text-velvet-800/80 font-medium mt-1" data-en="Building A & B, Phnom Penh" data-km="អាគារ A & B, រាជធានីភ្នំពេញ" data-km-class="font-battambang text-xs">Building A &amp; B, Phnom Penh</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="openMapModal()" class="mt-12 px-8 py-3.5 border border-velvet-900 text-velvet-900 hover:bg-velvet-900 hover:text-ivory-50 transition-all text-xs tracking-widest uppercase rounded-xs inline-flex items-center gap-3 cursor-pointer shadow-md">
+                <span data-en="SHOW ON MAP" data-km="មើលទីតាំងលើផែនទី" data-km-class="font-battambang text-xs">SHOW ON MAP</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+        </section>
+
+        <!-- ================= 4. WEDDING PROGRAM ================= -->
+        <section class="py-20 px-6 md:px-12 text-center burgundy-silk text-ivory-100 border-t border-gold-500/20">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-400 font-light mb-1" data-en="PROGRAM" data-km="កម្មវិធីសង្ខេប" data-km-class="font-moul text-xs md:text-sm text-gold-300">PROGRAM</p>
+            <h2 class="font-serif text-3xl md:text-5xl uppercase tracking-wider text-ivory-50 mb-14" data-en="Schedule of the Day" data-km="កាលវិភាគនៃពិធីមង្គលការ" data-km-class="font-noto-khmer text-2xl md:text-3xl font-bold text-ivory-100">Schedule of the Day</h2>
+
+            <div class="max-w-xl mx-auto space-y-8 relative before:absolute before:inset-0 before:left-3 md:before:left-4 before:w-px before:bg-gold-500/30 text-left pl-8 md:pl-10">
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="06:00 AM" data-km="០៦:០០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">06:00 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Guest Gathering & Morning Refreshments" data-km="ការជួបជុំភ្ញៀវកិត្តិយស និងពិសារអាហារពេលព្រឹក" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីសែនក្រុងពាលី</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Welcome drinks and reception" data-km="ទទួលស្វាគមន៍ភ្ញៀវកិត្តិយសយ៉ាងកក់ក្តៅ" data-km-class="font-kantumruy text-xs">Krong Peali Ceremony</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="06:30 AM" data-km="០៦:៣០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">06:30 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Fruit & Gift Procession (Hai Nean)" data-km="ពិធីហែជំនូន និងផ្លែឈើ (ហែជំនូន)" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;"">ជួបជុំភ្ញៀវកិត្តិយសត្រៀមពិធីហែជំនូន</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Traditional Chhai Yam parade with groom’s family" data-km="ពិធីហែជំនូនតាមប្រពៃណីខ្មែរអមដោយវង់ភ្លេងឆៃយ៉ាំ" data-km-class="font-kantumruy text-xs">Assembly of Honored Guests for the Traditional Wedding Gift Procession</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="07:00 AM" data-km="០៧:០០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">07:00 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Presentation of Dowry & Ring Exchange" data-km="ពិធីរៀបរាប់ជំនូន និងពាក់ចិញ្ចៀន" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីហែជំនូន (កំណត់) អ្នកមហានិយាយជើងការ ពិធីរៀង ឬរៀបរាប់ផ្លែឈើ</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Formal presentation of gifts to bride's parents" data-km="ពិធីរៀបរាប់ជំនូន និងការបំពាក់ចិញ្ចៀនមង្គល" data-km-class="font-kantumruy text-xs">Traditional Wedding Gift Procession</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="07:30 AM" data-km="០៧:៣០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">07:30 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Monk Blessing Ceremony (Sot Mon)" data-km="ពិធីរាប់បាត្រ និងចម្រើនព្រះបរិត្ត (សូត្រមន្ត)" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីព្រេនជំនូន និងបំពាក់ចិញ្ជៀន ពិធីអញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលព្រឹក</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Sacred buddhist chanting & blessings" data-km="ពិធីសូត្រមន្តលើករាសី និងប្រគល់ពរជ័យពីព្រះសង្ឃ" data-km-class="font-kantumruy text-xs">Wedding Gift Blessing, Ring Exchange Ceremony and Invitation to Hornored Guests to Enjoy Breakfast </p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="08:35 AM" data-km="០៨:៣៥ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">08:35 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Hair Cutting Ceremony (Gaat Sah)" data-km="ពិធីកាត់សក់បង្កក់សិរី" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីសូត្រមន្តចម្រើនព្រះបរិត្ត</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Symbolic cleansing for good luck and happiness" data-km="ពិធីកាត់សក់មង្គលដើម្បីជម្រះរឿងមិនល្អ និងប្រសិទ្ធពរ" data-km-class="font-kantumruy text-xs">Buddhist Blessing Ceremony and Chanting of Sacred Prayers</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="09:45 AM" data-km="០៩:៤៥ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">09:45 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Passing of Candles (Bangvul Popil)" data-km="ពិធីបង្វិលពពិល" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីកាត់សក់បង្កក់សេរី</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Sacred candle rotation ritual by married couples" data-km="ពិធីបង្វិលពពិលដើម្បីបណ្តេញគ្រោះឧបទ្រព" data-km-class="font-kantumruy text-xs">Hair-Cutting Ceremony for Blessings and Good Fortune</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="10:30 AM" data-km="១០:៣០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">10:30 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Wrist Tying Ceremony (Chong Dai)" data-km="ពិធីចងដៃកាត់ខ្វាក់" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100" style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីសំពះផ្ទឹម បើកវាំងនន បាចផ្កាស្លា បង្វិលពពិល គួចចំណងដៃ ព្រះថោងតោងស្បៃនាងនាគ</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Passing of blessings & red thread by elders" data-km="ពិធីចងដៃជូនពរជ័យ និងចាក់ទឹកដូងពីសាច់ញាតិ" data-km-class="font-kantumruy text-xs">Sampeah Phteum (Traditional Khmer Wedding Ceremony), Veil Opening, Betel Flower Sprinkling, Pobiil Candle-Circling Ritual, Wrist-Tying Ceremony, and Preah Thong Holding Neang Neak’s Scarf Ritual.</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="11:30 AM" data-km="១១:៣០ ព្រឹក" data-km-class="font-moulpali text-xs text-gold-300">11:30 AM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Family Luncheon" data-km="ពិធីពិសាអាហារថ្ងៃត្រង់គ្រួសារ" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">ពិធីអញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារថ្ងៃត្រង់</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Traditional noon banquet for relatives & guests" data-km="អាហារថ្ងៃត្រង់សាមគ្គីគ្រួសារ និងភ្ញៀវកិត្តិយស" data-km-class="font-kantumruy text-xs">Traditional noon banquet for relatives &amp; guests</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[25px] md:-left-[29px] top-1.5 w-2.5 h-2.5 rounded-full bg-gold-400 ring-4 ring-velvet-900"></div>
+                    <span class="font-serif text-gold-300 font-semibold text-sm md:text-base" data-en="05:00 PM" data-km="០៥:០០ ល្ងាច" data-km-class="font-moulpali text-xs text-gold-300">05:00 PM</span>
+                    <h4 class="font-serif text-base md:text-lg text-ivory-50 font-medium" data-en="Grand Gala Banquet & Celebration" data-km="ពិធីលៀងសាយភោជន៍អាពាហ៍ពិពាហ៍" data-km-class="font-noto-khmer text-xs md:text-sm font-semibold text-ivory-100"style="font-family: Kh Baphnom Khveak Thin ; font-size:larger;">អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារពេលល្ងាច</h4>
+                    <p class="text-xs text-ivory-200/60 font-light" data-en="Dinner, music, toast, cake cutting & dancing" data-km="ពិសាអាហារពេលល្ងាច តន្ត្រី ជល់កែវ និងរាំកម្សាន្ត" data-km-class="font-kantumruy text-xs">Invitation to Honored Guests to Enjoy Dinner</p>
+                </div>
+            </div>
+
+            <p class="font-script text-2xl md:text-3xl text-gold-300 mt-14" data-en="It will be beautiful, delicious and unforgettable! ♡" data-km="« នឹងពោរពេញដោយភាពរីករាយ និងចងចាំជានិច្ច! ♡ »" data-km-class="font-battambang text-xs md:text-sm text-gold-300 font-semibold">
+                It will be beautiful, delicious and unforgettable! ♡
+            </p>
+        </section>
+
+        <!-- ================= 5. COUNTDOWN SECTION ================= -->
+        <section class="py-16 px-6 bg-velvet-900/90 text-center border-t border-gold-500/20">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-400/90 font-light mb-2" data-en="COUNTING DOWN" data-km="រាប់ថយក្រោយ" data-km-class="font-moul text-xs md:text-sm text-gold-300">COUNTING DOWN</p>
+            <h3 class="font-serif text-2xl md:text-3xl text-ivory-50 mb-8" data-en="Until Our Big Day" data-km="ឆ្ពោះទៅកាន់ថ្ងៃសិរីមង្គល" data-km-class="font-noto-khmer text-lg md:text-xl text-ivory-100">Until Our Big Day</h3>
+
+            <div class="grid grid-cols-4 gap-3 max-w-lg mx-auto mb-10">
+                <div class="bg-velvet-950 border border-gold-500/30 p-4 rounded-xs shadow-xl">
+                    <span id="days" class="font-serif text-2xl md:text-4xl font-bold text-gold-300 block">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-wider text-ivory-200/60" data-en="Days" data-km="ថ្ងៃ" data-km-class="font-kantumruy text-xs">Days</span>
+                </div>
+                <div class="bg-velvet-950 border border-gold-500/30 p-4 rounded-xs shadow-xl">
+                    <span id="hours" class="font-serif text-2xl md:text-4xl font-bold text-gold-300 block">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-wider text-ivory-200/60" data-en="Hours" data-km="ម៉ោង" data-km-class="font-kantumruy text-xs">Hours</span>
+                </div>
+                <div class="bg-velvet-950 border border-gold-500/30 p-4 rounded-xs shadow-xl">
+                    <span id="minutes" class="font-serif text-2xl md:text-4xl font-bold text-gold-300 block">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-wider text-ivory-200/60" data-en="Mins" data-km="នាទី" data-km-class="font-kantumruy text-xs">Mins</span>
+                </div>
+                <div class="bg-velvet-950 border border-gold-500/30 p-4 rounded-xs shadow-xl">
+                    <span id="seconds" class="font-serif text-2xl md:text-4xl font-bold text-gold-300 block">00</span>
+                    <span class="text-[10px] md:text-xs uppercase tracking-wider text-ivory-200/60" data-en="Secs" data-km="វិនាទី" data-km-class="font-kantumruy text-xs">Secs</span>
+                </div>
+            </div>
+
+            <button onclick="downloadIcsCalendar()" class="px-6 py-3 bg-gold-500/10 border border-gold-400/50 text-gold-300 hover:bg-gold-500/20 text-xs tracking-wider uppercase transition-all rounded-xs inline-flex items-center gap-2 cursor-pointer">
+                <i class="fa-regular fa-calendar-plus text-sm"></i>
+                <span data-en="ADD TO CALENDAR (.ICS)" data-km="រក្សាទុកក្នុងប្រតិទិន (.ICS)" data-km-class="font-battambang text-xs">ADD TO CALENDAR (.ICS)</span>
+            </button>
+        </section>
+
+        <!-- ================= 6. ANIMATED PHOTO GALLERY SLIDER SECTION ================= -->
+        <section class="py-20 px-4 md:px-12 ivory-card border-t border-gold-500/20 text-center">
+            <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-600 font-medium mb-1" data-en="MEMORIES" data-km="រូបភាពអនុស្សាវរីយ៍" data-km-class="font-moul text-xs md:text-sm text-gold-600">MEMORIES</p>
+            <h2 class="font-serif text-3xl md:text-5xl uppercase tracking-wider text-velvet-900 mb-10" data-en="Photo Gallery" data-km="អាល់ប៊ុមរូបថត" data-km-class="font-noto-khmer text-2xl md:text-3xl font-bold text-velvet-950">Photo Gallery</h2>
+
+            <!-- Animated Slider Container -->
+            <div class="relative max-w-4xl mx-auto rounded-xs overflow-hidden shadow-2xl border-2 border-gold-500/40 bg-velvet-950 group">
+                <!-- Main Slide Viewport -->
+                <div class="relative h-[380px] sm:h-[480px] md:h-[580px] w-full flex items-center justify-center overflow-hidden">
+                    <img id="sliderMainImg" src="img/2J3A0149.JPG" alt="Gallery Photo" class="w-full h-full object-cover slide-fade cursor-pointer" onclick="openCurrentLightbox()">
+                    
+                    <!-- Overlay Dark Gradient for Controls Legibility -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+
+                    <!-- Slide Counter Badge -->
+                    <div class="absolute top-4 right-4 bg-velvet-950/80 backdrop-blur-md text-gold-300 border border-gold-500/30 px-3 py-1 rounded-full text-xs font-mono tracking-wider z-10">
+                        <span id="slideCounter">1 / 13</span>
+                    </div>
+
+                    <!-- Left / Right Navigation Buttons -->
+                    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-velvet-950/70 border border-gold-500/40 text-gold-300 hover:text-white hover:bg-gold-500/80 hover:border-gold-400 transition-all flex items-center justify-center shadow-lg z-10 cursor-pointer">
+                        <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-velvet-950/70 border border-gold-500/40 text-gold-300 hover:text-white hover:bg-gold-500/80 hover:border-gold-400 transition-all flex items-center justify-center shadow-lg z-10 cursor-pointer">
+                        <i class="fa-solid fa-chevron-right text-sm md:text-base"></i>
+                    </button>
+                </div>
+
+                <!-- Slide Indicator Dots -->
+                <div id="sliderDots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10 max-w-full overflow-x-auto px-4 py-1">
+                    <!-- Dots will be generated dynamically by JS -->
+                </div>
+            </div>
+
+            <!-- Thumbnail Strip Carousel Bar -->
+            <div id="thumbnailContainer" class="max-w-4xl mx-auto mt-4 flex items-center gap-2 overflow-x-auto py-2 scrollbar-none px-1">
+                <!-- Thumbnails generated dynamically by JS -->
+            </div>
+        </section>
+
+        <!-- ================= 7. RSVP FORM SECTION ================= -->
+        <section class="py-20 px-6 burgundy-silk text-center relative border-t border-gold-500/20">
+            <div class="border border-gold-500/30 p-8 md:p-12 rounded-xs relative max-w-lg mx-auto shadow-2xl">
+                <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-gold-400 font-light mb-1" data-en="R.S.V.P." data-km="ការឆ្លើយតប" data-km-class="font-moul text-xs md:text-sm text-gold-300">R.S.V.P.</p>
+                <h3 class="font-serif text-2xl md:text-3xl text-ivory-50 uppercase tracking-wider mb-2" data-en="Please Confirm Presence" data-km="សូមបញ្ជាក់វត្តមានចូលរួម" data-km-class="font-noto-khmer text-lg md:text-xl text-ivory-100 font-bold">Please Confirm Presence</h3>
+                <p class="text-xs text-ivory-200/70 mb-8 font-light" data-en="It is very important for us to know if you can share this day with us." data-km="វត្តមានរបស់លោកអ្នកជាកិត្តិយសដ៏ខ្ពង់ខ្ពស់បំផុតសម្រាប់យើងខ្ញុំ" data-km-class="font-battambang text-xs md:text-sm text-ivory-200">It is very important for us to know if you can share this day with us.</p>
+
+                <form id="rsvpForm" onsubmit="handleRsvpSubmit(event)" class="space-y-5 text-left">
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-gold-300/90 mb-1" data-en="Your Name" data-km="ឈ្មោះពេញ" data-km-class="font-kantumruy text-xs text-gold-300">Your Name</label>
+                        <input type="text" required class="w-full px-4 py-2.5 bg-velvet-950/80 border border-gold-500/30 rounded-xs text-ivory-50 text-xs md:text-sm focus:outline-none focus:border-gold-400 font-kantumruy" placeholder="e.g. Sokha & Family">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-gold-300/90 mb-1" data-en="Attendance" data-km="ការចូលរួម" data-km-class="font-kantumruy text-xs text-gold-300">Attendance</label>
+                        <select class="w-full px-4 py-2.5 bg-velvet-950/80 border border-gold-500/30 rounded-xs text-ivory-50 text-xs md:text-sm focus:outline-none focus:border-gold-400 font-kantumruy">
+                            <option value="yes" data-en="Yes, I will attend" data-km="បាទ/ចាស ខ្ញុំនឹងចូលរួម">Yes, I will attend</option>
+                            <option value="no" data-en="Regretfully cannot attend" data-km="សោកស្តាយ មិនអាចចូលរួមបាន">Regretfully cannot attend</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-gold-300/90 mb-1" data-en="Number of Guests" data-km="ចំនួនភ្ញៀវ" data-km-class="font-kantumruy text-xs text-gold-300">Number of Guests</label>
+                        <input type="number" min="1" max="6" value="1" class="w-full px-4 py-2.5 bg-velvet-950/80 border border-gold-500/30 rounded-xs text-ivory-50 text-xs md:text-sm focus:outline-none focus:border-gold-400 font-kantumruy">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-wider text-gold-300/90 mb-1" data-en="Wishes for Couple" data-km="សារជូនពរ" data-km-class="font-kantumruy text-xs text-gold-300">Wishes for Couple</label>
+                        <textarea rows="3" class="w-full px-4 py-2.5 bg-velvet-950/80 border border-gold-500/30 rounded-xs text-ivory-50 text-xs md:text-sm focus:outline-none focus:border-gold-400 font-kantumruy" placeholder="Your warm blessings..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-velvet-800 border border-gold-500/60 text-gold-300 hover:bg-gold-500 hover:text-velvet-950 font-medium text-xs tracking-[0.2em] uppercase transition-all rounded-xs shadow-lg mt-2 cursor-pointer">
+                        <span data-en="CONFIRM RSVP →" data-km="បញ្ជូនការឆ្លើយតប →" data-km-class="font-battambang text-xs">CONFIRM RSVP →</span>
+                    </button>
+                </form>
+
+                <div id="rsvpSuccess" class="hidden text-center py-8">
+                    <i class="fa-solid fa-circle-check text-gold-400 text-4xl mb-3"></i>
+                    <h4 class="font-serif text-2xl text-ivory-50" data-en="Thank You!" data-km="សូមអរគុណ!" data-km-class="font-moul text-base text-gold-300">Thank You!</h4>
+                    <p class="text-xs md:text-sm text-ivory-200/80 mt-2" data-en="Your response has been received with love." data-km="ការឆ្លើយតបរបស់អ្នកត្រូវបានរក្សាទុកដោយក្តីរីករាយ។" data-km-class="font-battambang text-xs">Your response has been received with love.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 8. FOOTER SECTION ================= -->
+        <footer class="py-14 px-6 text-center bg-velvet-950 border-t border-gold-500/20">
+            <p class="text-xs md:text-sm text-ivory-200/60 font-serif italic mb-2" data-en="Thank you for being part of our story ♡" data-km="សូមអរគុណសម្រាប់ការអញ្ជើញចូលរួមជាផ្នែកនៃរឿងរ៉ាវរបស់យើង ♡" data-km-class="font-battambang text-xs">
+                Thank you for being part of our story ♡
+            </p>
+            <p class="font-script text-3xl md:text-4xl text-gold-300 mb-2" data-en="Pete & Moo" data-km="ហេង ពិសិដ្ឋ & កែប សូផាមរកត" data-km-class="font-moul text-sm text-gold-300">
+                Pete &amp; Moo
+            </p>
+            <div class="font-serif text-xl tracking-[0.2em] text-ivory-200 font-light my-2">
+                P | M
+            </div>
+            <p class="text-[10px] md:text-xs uppercase tracking-widest text-gold-400/70" data-en="11 . 12 . 2026" data-km="១១ . ១២ . ២០២៦" data-km-class="font-moulpali text-xs">
+                11 . 12 . 2026
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- MAP INTERACTIVE MODAL -->
+    <div id="mapModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-velvet-900 border border-gold-500/40 rounded-xs max-w-md w-full p-6 relative shadow-2xl">
+            <button onclick="closeMapModal()" class="absolute top-4 right-4 text-ivory-200/70 hover:text-white text-lg cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif text-2xl text-gold-300 mb-1" data-en="Venue Location" data-km="ទីតាំងប្រារព្ធពិធី" data-km-class="font-noto-khmer text-lg font-bold text-gold-300">Venue Location</h3>
+            <p class="text-xs md:text-sm text-ivory-200/70 mb-5" data-en="The Grand Terrace (Building A & B)" data-km="មជ្ឈមណ្ឌល ឌឹ ហ្គ្រេន ថេរ៉ាស (អាគារ A & B)" data-km-class="font-battambang text-xs">The Grand Terrace (Building A &amp; B)</p>
+            
+            <div class="w-full h-72 rounded-xs overflow-hidden mb-5 border border-gold-500/20">
+                <iframe class="w-full h-full border-0" src="https://www.openstreetmap.org/export/embed.html?bbox=104.88%2C11.54%2C104.94%2C11.58&amp;layer=mapnik" loading="lazy"></iframe>
+            </div>
+            
+            <a href="https://maps.google.com" target="_blank" class="block text-center py-3 bg-gold-500 text-velvet-950 font-medium text-xs uppercase tracking-wider rounded-xs hover:bg-gold-400 transition-all cursor-pointer">
+                <span data-en="Open in Google Maps" data-km="បើកក្នុង Google Maps" data-km-class="font-battambang text-xs font-bold">Open in Google Maps</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white/80 hover:text-white text-2xl cursor-pointer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button onclick="changeLightboxImage(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-3xl p-3 cursor-pointer">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="changeLightboxImage(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-3xl p-3 cursor-pointer">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        
+        <img id="lightboxImg" src="" class="max-h-[85vh] max-w-full object-contain rounded-xs border border-gold-500/30 shadow-2xl">
+    </div>
+
+    <!-- JAVASCRIPT LOGIC CONTROLLERS -->
+    <script>
+        // Gallery Images List
+        const galleryImages = [
+            "img/2J3A0149.JPG",
+            "img/2J3A0240.JPG",
+            "img/2J3A0257.JPG",
+            "img/2J3A9282.JPG",
+            "img/2J3A0252.JPG",
+            "img/2J3A9107.JPG",
+            "img/2J3A9265.JPG",
+            "img/2J3A9629.JPG",
+            "img/2J3A9274.JPG",
+            "img/2J3A9765.JPG",
+            "img/2J3A0318.JPG",
+            "img/2J3A0004.JPG",
+            "img/2J3A0077.JPG"
+        ];
+
+        let currentSlideIdx = 0;
+        let slideAutoInterval = null;
+
+        // Initialize Animated Gallery Slider
+        function initGallerySlider() {
+            const dotsContainer = document.getElementById('sliderDots');
+            const thumbContainer = document.getElementById('thumbnailContainer');
+
+            dotsContainer.innerHTML = '';
+            thumbContainer.innerHTML = '';
+
+            galleryImages.forEach((src, idx) => {
+                // Generate dots
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 rounded-full transition-all cursor-pointer ${idx === 0 ? 'bg-gold-400 w-6' : 'bg-white/40 hover:bg-white/70'}`;
+                dot.onclick = () => goToSlide(idx);
+                dotsContainer.appendChild(dot);
+
+                // Generate thumbnails
+                const thumb = document.createElement('div');
+                thumb.className = `w-16 h-12 md:w-20 md:h-14 shrink-0 rounded-xs overflow-hidden cursor-pointer border transition-all ${idx === 0 ? 'border-gold-400 opacity-100 scale-105' : 'border-gold-500/20 opacity-60 hover:opacity-100'}`;
+                thumb.onclick = () => goToSlide(idx);
+                thumb.innerHTML = `<img src="${src}" class="w-full h-full object-cover" alt="Thumbnail ${idx + 1}">`;
+                thumbContainer.appendChild(thumb);
+            });
+
+            updateSlideUI();
+            startAutoSlide();
+        }
+
+        function updateSlideUI() {
+            const mainImg = document.getElementById('sliderMainImg');
+            
+            // Animation class reset
+            mainImg.classList.remove('opacity-100', 'scale-100');
+            mainImg.classList.add('opacity-0', 'scale-95');
+
+            setTimeout(() => {
+                mainImg.src = galleryImages[currentSlideIdx];
+                mainImg.classList.remove('opacity-0', 'scale-95');
+                mainImg.classList.add('opacity-100', 'scale-100');
+            }, 150);
+
+            // Counter Update
+            document.getElementById('slideCounter').innerText = `${currentSlideIdx + 1} / ${galleryImages.length}`;
+
+            // Update Dots
+            const dots = document.getElementById('sliderDots').children;
+            Array.from(dots).forEach((dot, idx) => {
+                if (idx === currentSlideIdx) {
+                    dot.className = 'w-6 h-2 rounded-full bg-gold-400 transition-all cursor-pointer';
+                } else {
+                    dot.className = 'w-2 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all cursor-pointer';
+                }
+            });
+
+            // Update Thumbnails (Auto-scroll removed)
+            const thumbs = document.getElementById('thumbnailContainer').children;
+            Array.from(thumbs).forEach((thumb, idx) => {
+                if (idx === currentSlideIdx) {
+                    thumb.className = 'w-16 h-12 md:w-20 md:h-14 shrink-0 rounded-xs overflow-hidden cursor-pointer border-2 border-gold-400 opacity-100 scale-105 transition-all';
+                } else {
+                    thumb.className = 'w-16 h-12 md:w-20 md:h-14 shrink-0 rounded-xs overflow-hidden cursor-pointer border border-gold-500/20 opacity-50 hover:opacity-100 transition-all';
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlideIdx = index;
+            updateSlideUI();
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            currentSlideIdx = (currentSlideIdx + 1) % galleryImages.length;
+            updateSlideUI();
+            resetAutoSlide();
+        }
+
+        function prevSlide() {
+            currentSlideIdx = (currentSlideIdx - 1 + galleryImages.length) % galleryImages.length;
+            updateSlideUI();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            slideAutoInterval = setInterval(() => {
+                nextSlide();
+            }, 4500);
+        }
+
+        function resetAutoSlide() {
+            if (slideAutoInterval) clearInterval(slideAutoInterval);
+            startAutoSlide();
+        }
+
+        function openCurrentLightbox() {
+            openLightbox(currentSlideIdx);
+        }
+
+        // Initialize slider on load
+        window.addEventListener('DOMContentLoaded', initGallerySlider);
+
+        // Language Toggle Controller
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'km' : 'en';
+            const body = document.getElementById('appBody');
+            body.setAttribute('lang', currentLang);
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                const text = el.getAttribute(`data-${currentLang}`);
+                const kmClass = el.getAttribute('data-km-class');
+
+                if (text !== null) {
+                    el.textContent = text;
+                }
+
+                if (currentLang === 'km' && kmClass) {
+                    el.dataset.origClass = el.className;
+                    el.className = kmClass;
+                } else if (currentLang === 'en' && el.dataset.origClass) {
+                    el.className = el.dataset.origClass;
+                }
+            });
+
+            if (currentLang === 'km') {
+                body.classList.add('font-khmer');
+            } else {
+                body.classList.remove('font-khmer');
+            }
+        }
+
+        // Live Countdown Script (Target: Dec 11, 2026)
+        const targetDate = new Date("December 11, 2026 06:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Synthesized Ambient Music Player
+        let audioCtx = null;
+        let isPlaying = false;
+        let intervalId = null;
+
+        function toggleAudio() {
+            const icon = document.getElementById('musicIcon');
+            if (!isPlaying) {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                playRomanticArpeggio();
+                icon.className = "fa-solid fa-pause text-xs";
+                isPlaying = true;
+            } else {
+                if (intervalId) clearInterval(intervalId);
+                icon.className = "fa-solid fa-music text-xs";
+                isPlaying = false;
+            }
+        }
+
+        function playRomanticArpeggio() {
+            const notes = [261.63, 329.63, 392.00, 493.88, 523.25, 392.00];
+            let noteIdx = 0;
+
+            intervalId = setInterval(() => {
+                if (!audioCtx) return;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(notes[noteIdx], audioCtx.currentTime);
+                
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 1.2);
+
+                noteIdx = (noteIdx + 1) % notes.length;
+            }, 600);
+        }
+
+        // Map Modal Control
+        function openMapModal() {
+            document.getElementById('mapModal').classList.remove('hidden');
+            document.getElementById('mapModal').classList.add('flex');
+        }
+        function closeMapModal() {
+            document.getElementById('mapModal').classList.add('hidden');
+            document.getElementById('mapModal').classList.remove('flex');
+        }
+
+        // Lightbox Controls
+        let currentImgIdx = 0;
+
+        function openLightbox(index) {
+            currentImgIdx = index;
+            document.getElementById('lightboxImg').src = galleryImages[currentImgIdx];
+            document.getElementById('lightboxModal').classList.remove('hidden');
+            document.getElementById('lightboxModal').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+            document.getElementById('lightboxModal').classList.remove('flex');
+        }
+
+        function changeLightboxImage(direction) {
+            currentImgIdx = (currentImgIdx + direction + galleryImages.length) % galleryImages.length;
+            document.getElementById('lightboxImg').src = galleryImages[currentImgIdx];
+        }
+
+        // RSVP Form Submit Controller
+        function handleRsvpSubmit(e) {
+            e.preventDefault();
+            document.getElementById('rsvpForm').classList.add('hidden');
+            document.getElementById('rsvpSuccess').classList.remove('hidden');
+        }
+
+        // Generate and download .ics calendar file
+        function downloadIcsCalendar() {
+            const icsData = [
+                "BEGIN:VCALENDAR",
+                "VERSION:2.0",
+                "PRODID:-//Pete & Moo Wedding//EN",
+                "BEGIN:VEVENT",
+                "SUMMARY:Wedding of Pete & Moo (ពិសិដ្ឋ & សូផាមរកត)",
+                "DESCRIPTION:Join us to celebrate the wedding of Pete & Moo at The Grand Terrace.",
+                "LOCATION:The Grand Terrace (Building A & B), Phnom Penh",
+                "DTSTART:20261211T060000",
+                "DTEND:20261211T220000",
+                "END:VEVENT",
+                "END:VCALENDAR"
+            ].join("\n");
+
+            const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute("download", "Pete_and_Moo_Wedding.ics");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
